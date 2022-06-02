@@ -8,15 +8,13 @@ import MyWork from './components/MyWork'
 
 
 function App() {
-  
+
 
   return (
     <div className="App">
-      
-        <div class="background"></div>
-        <Home/>
-        <MyWork/>
-      
+      <div class="background"></div>
+      <Home />
+      <MyWork />
     </div>
   );
 }
