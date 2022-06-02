@@ -1,9 +1,8 @@
-*{
+* {
     color: white;
     margin: 0;
     padding: 0;
     line-height: 1em;
-    
     font-style: normal;
     font-variant-ligatures: normal;
     font-variant-caps: normal;
@@ -16,14 +15,18 @@
     -webkit-text-size-adjust: 100%;
     text-transform: uppercase;
 }
-html{
+
+html {
     font-size: 10px;
-    
+
 }
-body{
-    background: linear-gradient(45deg, rgba(4,3,8,1) 0%, rgba(14,11,25,1) 51%, rgba(4,3,8,1) 100%);    overflow-x: visible;
+
+body {
+    background: linear-gradient(45deg, rgba(4, 3, 8, 1) 0%, rgba(14, 11, 25, 1) 51%, rgba(4, 3, 8, 1) 100%);
+    overflow-x: visible;
 }
-.background{
+
+.background {
     opacity: 0.1;
     position: absolute;
     width: 100%;
@@ -32,24 +35,35 @@ body{
     background-size: 25%;
     animation: 30s bg alternate-reverse infinite linear;
 }
-@keyframes bg{
-    from{background-position: 0 0;}
-    to{background-position: 300px 100px;}
+
+@keyframes bg {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 300px 100px;
+    }
 }
-span{
+
+span {
     font-weight: bolder;
     line-height: 2.2;
     letter-spacing: 0.4em;
 }
-h1{
+
+h1 {
     font-size: 5rem;
 }
-h2{
+
+h2 {
     font-size: 3rem;
 }
-h3{
+
+h3 {
     font-size: 2rem;
 }
-h4{
+
+h4 {
     font-size: 1.3rem;
 }
