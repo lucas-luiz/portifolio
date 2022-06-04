@@ -18,7 +18,7 @@ const MyWork = styled(Section)`
     & .MyWork__title{
         text-align: center;
         position: absolute;
-        transition: 0.3s ease-in-out;
+        transition: 0.4s ease-in-out;
     }
     & .expanded{
         top: 50%;

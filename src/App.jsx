@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className="App">
-      <div class="background"></div>
+      <div className="background"></div>
       <Home />
       <MyWork />
     </div>
