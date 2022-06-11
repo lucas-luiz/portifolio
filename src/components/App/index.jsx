@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
-import './index.css'
 
-import Home from './components/Home'
-import MyWork from './components/MyWork'
-
-
-
+//features
+import Home from '../../feature/Home'
+import MyWork from '../../feature/MyWork';
 
 function App() {
 
