@@ -19,8 +19,9 @@ const Home = styled(Section)`
         line-height: 1.5;
     }
     & .Home__subtitle{
-        letter-spacing: 0.4em;
-        line-height: 1.5rem ;
+        font-weight: bolder;
+        letter-spacing: .4em;
+        line-height: 2.2 ;
         padding-left: .4em;
     }
 `

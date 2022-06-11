@@ -24,13 +24,8 @@ function MyWork() {
 
     const [currProject, setCurrProject] = useState(null)
     const [canvasShow, setCanvasShow] = useState('hide')
-    const openProject = (project) => {
-        setCurrProject(project)
 
-    }
-    const closeProject = () => {
-        setCurrProject(null)
-    }
+    //USE EFFECT PARA ABRIR A JANELA PROJECT
     useEffect(() => {
         if (currProject) {
             setCanvasShow('show')
@@ -68,15 +63,24 @@ function MyWork() {
                         return (
                             index >= Object.keys(projects).length / 2 ?
                                 //left-side items
-                                <span className="nav__span span--right" key={index} onClick={() => openProject(project)} >
+                                <span className="nav__span span--right" key={index} onClick={
+                                    () => {
+                                        if (!currProject) {
+                                            setCurrProject(project)
+                                        }
+                                    }} >
                                     {project}
                                     <VscDebugBreakpointLog></VscDebugBreakpointLog>
 
                                 </span>
                                 :
                                 //right-side items
-                                <span className="nav__span span--left" key={index} onClick={() => openProject(project)} >
-
+                                <span className="nav__span span--left" key={index} onClick={
+                                    () => {
+                                        if (!currProject) {
+                                            setCurrProject(project)
+                                        }
+                                    }} >
                                     <VscDebugBreakpointLog></VscDebugBreakpointLog>
                                     {project}
                                 </span>
@@ -84,33 +88,17 @@ function MyWork() {
                     })
                 }
             </nav>
-            <div id="canvasDiv" className={"MyWork__canvasDiv canvasDiv--" + canvasShow}></div>
-            {/* <div className="MyWork__leftNav">
-
-                <span onMouseOver={() => openProject('cryptography')}>
-                    <VscDebugBreakpointLog></VscDebugBreakpointLog>
-                    cryptography
-                </span>
-                <span onMouseOver={() => openProject('AI')}>
-                    <VscDebugBreakpointLog></VscDebugBreakpointLog>
-                    AI
-                </span>
+            <div id="canvasDiv" className={"MyWork__canvasDiv canvasDiv--" + canvasShow}>
+                <div className="canvasDiv__nav">
+                    <button id="canvas_close" className="canvasDiv__nav__button" onClick={() => {
+                        if (currProject) {
+                            console.log('asdf')
+                            setCurrProject(null)
+                        }
+                    }}>X</button>
+                </div>
             </div>
 
-            <div className="MyWork__rightNav">
-                <span onMouseOver={() => openProject('search')}>
-                    search
-                    <VscDebugBreakpointLog></VscDebugBreakpointLog>
-                </span>
-                <span onMouseOver={() => openProject('lorem')}>
-                    lorem
-                    <VscDebugBreakpointLog></VscDebugBreakpointLog>
-                </span>
-                <span onMouseOver={() => openProject('API')}>
-                    API
-                    <VscDebugBreakpointLog></VscDebugBreakpointLog>
-                </span>
-            </div> */}
         </StyledMyWork >
     )
 }

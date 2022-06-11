@@ -14,11 +14,11 @@
     -webkit-font-smoothingx: antialiased;
     -webkit-text-size-adjust: 100%;
     text-transform: uppercase;
+    box-sizing: border-box;
 }
 
 html {
     font-size: 10px;
-
 }
 
 body {
@@ -57,7 +57,7 @@ span {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 4.5rem;
 }
 
 h2 {

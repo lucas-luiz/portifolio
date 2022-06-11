@@ -59,29 +59,60 @@ const MyWork = styled(Section)`
         grid-column: 1;
     }
 
-    & canvas{
-        position: absolute;
-        left:0;
-        top:0;
-        z-index: 2;
-        background-color: black;
-    }
+    
 
     & .MyWork__canvasDiv{
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
         height: 50%;
         width: 50%;
+
         background-color: rgba(4, 3, 8, 1);
-        margin: auto;
+        
+        display:grid;
+        grid-template-rows: 20px auto;
+        
+
+        & .canvasDiv__nav{
+            grid-row:1;
+            display:flex;
+            flex-direction: row-reverse;
+
+            background-color: #0C0915;
+            border: 1px solid black;
+
+            padding: 3px;
+
+            & .canvasDiv__nav__button{
+                border: none;
+                background: black;
+                color: grey;
+                cursor:pointer;
+
+                display: flex;
+                justify-content:center;
+                align-items: center;
+
+                border-radius:100%;
+                font-size:10px;
+
+                padding: 2px;
+            }
+        }
+        & canvas{
+            grid-row: 2;
+            z-index: 2;
+            background-color: black;
+        }
     }
     & .canvasDiv--show{
-        display: initial;
+        opacity: 1;
     }
     & .canvasDiv--hide{
-        display:none;
+        opacity: 0;
     }
 `
 
