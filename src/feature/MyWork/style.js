@@ -19,6 +19,7 @@ const MyWork = styled(Section)`
         text-align: center;
         position: absolute;
         transition: 0.4s ease-in-out;
+        white-space: nowrap;
     }
     & .expanded{
         top: 50%;
@@ -36,6 +37,9 @@ const MyWork = styled(Section)`
     }
 
     & .nav{
+        position: absolute;
+        top: 0;
+        left: 0;
         height: 100%;
         width: 100%;
         display: grid;
@@ -63,14 +67,14 @@ const MyWork = styled(Section)`
 
     & .MyWork__canvasDiv{
         position: absolute;
-        top: 50%;
+        bottom: 0;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translateX(-50%);
 
         height: 50%;
         width: 50%;
-
-        background-color: rgba(4, 3, 8, 1);
+/* 
+        background-color: rgba(4, 3, 8, 1); */
         
         display:grid;
         grid-template-rows: 20px auto;
@@ -105,7 +109,7 @@ const MyWork = styled(Section)`
         & canvas{
             grid-row: 2;
             z-index: 2;
-            background-color: black;
+            background-color: transparent;
         }
     }
     & .canvasDiv--show{
