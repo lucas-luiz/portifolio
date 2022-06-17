@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react'
 import StyledMyWork from './style'
 
 //components
-import Project from './Project'
+import Sorting from './Sorting/index'
 
 //icons
 import { IoMdArrowDropdown } from 'react-icons/io'
@@ -69,7 +69,8 @@ function MyWork() {
                     })
                 }
             </nav>
-            {currProject ? <Project project={currProject} /> : null}
+            {currProject == 'sorting' ? <Sorting /> : null}
+
         </StyledMyWork >
     )
 }

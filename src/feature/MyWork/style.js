@@ -16,12 +16,17 @@ const MyWork = styled(Section)`
     }
     
     & .MyWork__title{
+        
         text-align: center;
         position: absolute;
         transition: 0.4s ease-in-out;
         white-space: nowrap;
+        
     }
     & .expanded{
+        display:flex;
+        align-items: baseline;
+        line-height:.5;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
