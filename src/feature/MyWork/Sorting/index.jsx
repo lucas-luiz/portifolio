@@ -48,19 +48,37 @@ function Sorting() {
     }, [])
     return (
         <StyledSorting >
-            <div className="top">
-                {
-                    array.map((vector, index) => {
-                        return <div className='vector' key={index} style={{ height: `${vector}%` }}></div>
-                    })
-                }
+
+            <div className="sorting__info">
+                {/* 
+                time
+                algorithm infos (time, ex O^n)
+                number of vectors
+                */}
             </div>
-            <div className="bottom">
-                {
-                    array.map((vector, index) => {
-                        return <div className='vector' key={index} style={{ height: `${vector}%` }}></div>
-                    })
-                }
+
+            <div className="sorting__visualization">
+                <div className="top">
+                    {
+                        array.map((vector, index) => {
+                            return <div className='vector' key={index} style={{ height: `${vector}%` }}></div>
+                        })
+                    }
+                </div>
+                <div className="bottom">
+                    {
+                        array.map((vector, index) => {
+                            return <div className='vector' key={index} style={{ height: `${vector}%` }}></div>
+                        })
+                    }
+                </div>
+            </div>
+            <div className="sorting__config">
+                {/* 
+                algorithm 
+                speed
+                array size (number of vectors)
+                 */}
             </div>
         </StyledSorting >
     )

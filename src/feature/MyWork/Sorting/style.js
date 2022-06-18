@@ -1,6 +1,13 @@
 import styled from 'styled-components'
 const StyledSorting = styled.div`
-    width: 22rem;
+    width:70rem;
+    height: 25rem;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns: 1fr 22rem 1fr;
+ & > .sorting__visualization{
+    width: 100%;
     margin:auto;
 
    /*  background-color:black ; */
@@ -29,5 +36,7 @@ const StyledSorting = styled.div`
         background-color: white;
         width: 2px;
     }
+ }
+   
 `
 export default StyledSorting
