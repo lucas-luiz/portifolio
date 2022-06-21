@@ -50,11 +50,11 @@ function Sorting() {
         <StyledSorting >
 
             <div className="sorting__info">
-                {/* 
-                time
-                algorithm infos (time, ex O^n)
-                number of vectors
-                */}
+
+                <span>Time complexity: θ(n^2)</span>
+                <span>Number of vectors: 20</span>
+                <span>Time (s): 2.1215312</span>
+
             </div>
 
             <div className="sorting__visualization">
@@ -74,11 +74,13 @@ function Sorting() {
                 </div>
             </div>
             <div className="sorting__config">
-                {/* 
-                algorithm 
-                speed
-                array size (number of vectors)
-                 */}
+                <span>selection sort</span>
+                <span>isertion sort</span>
+                <span>bubble sort</span>
+                <span>quick sort</span>
+
+                <span>speed: 0----------</span>
+                <span>array size: medium</span>
             </div>
         </StyledSorting >
     )

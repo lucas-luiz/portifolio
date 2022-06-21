@@ -5,15 +5,8 @@ const MyWork = styled(Section)`
     display: flex;
     justify-content: space-between;
 
-    & span{
-        display: flex;
-        align-items:center;
-        column-gap:0.5rem;
-        padding: 1rem;
-    }
-    & span:hover{
-        column-gap:1em;
-    }
+   
+   
     
     & .MyWork__title{
         
@@ -57,6 +50,15 @@ const MyWork = styled(Section)`
         width: fit-content;
         cursor: pointer;
         transition: 0.3s ease-in-out;
+
+        display: flex;
+        align-items:center;
+        column-gap:0.5rem;
+        padding: 1rem;
+    }
+    & .nav__span:hover{
+        column-gap:1em;
+
     }
 
     & .span--right{
