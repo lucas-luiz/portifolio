@@ -11,6 +11,10 @@ const StyledSorting = styled.div`
         flex-direction: column;
         
     }
+
+    & .sorting__config{
+        align-items: flex-end;
+    }
     & .sorting__visualization{
         width: 100%;
         margin:auto;

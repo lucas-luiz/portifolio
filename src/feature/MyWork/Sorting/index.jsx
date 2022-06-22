@@ -9,11 +9,15 @@ import StyledSorting from './style'
 
 function Sorting() {
 
-
+    const [time, setTime] = useState(0)
     const [array, setArray] = useState([])
 
 
     useEffect(() => {
+
+        const timer = setInterval(() => {
+
+        }, 60)
         const numVectors = 20
         //SET ARRAY
         for (let i = 0; i < numVectors; i++) {
@@ -25,6 +29,7 @@ function Sorting() {
         let count = 0
         let unorderedArea = numVectors
         let currArray = array
+        const startTime = Date.now()
         const sorting = setInterval(() => {
             if (unorderedArea > 0) {
 
@@ -43,9 +48,11 @@ function Sorting() {
             } else {
                 clearInterval(sorting)
             }
+            setTime((Date.now() - startTime) / 1000)
 
         }, 30);
     }, [])
+
     return (
         <StyledSorting >
 
@@ -53,7 +60,7 @@ function Sorting() {
 
                 <span>Time complexity: θ(n^2)</span>
                 <span>Number of vectors: 20</span>
-                <span>Time (s): 2.1215312</span>
+                <span>Time (s): {time}</span>
 
             </div>
 
