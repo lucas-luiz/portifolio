@@ -3,18 +3,31 @@ const StyledSorting = styled.div`
     width:70rem;
     height: 25rem;
     margin:auto;
+    z-index:100;
 
     display:grid;
     grid-template-columns: 1fr 22rem 1fr;
     & .sorting__info, .sorting__config{
         display: flex;
         flex-direction: column;
-        
+        justify-content: space-between; 
+    }
+    & .sorting__info{
+        & > div{
+            display:flex;
+            flex-direction: column;
+        }
     }
 
     & .sorting__config{
         align-items: flex-end;
+        & > div{
+            display:flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
     }
+
     & .sorting__visualization{
         width: 100%;
         margin:auto;

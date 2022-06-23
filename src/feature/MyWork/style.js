@@ -43,10 +43,11 @@ const MyWork = styled(Section)`
         display: grid;
         grid-auto-flow: column;
         justify-content: space-between;
+        padding:1em;
 
     }
 
-    & .nav__span{
+    .nav__span{
         width: fit-content;
         cursor: pointer;
         transition: 0.3s ease-in-out;
@@ -54,9 +55,9 @@ const MyWork = styled(Section)`
         display: flex;
         align-items:center;
         column-gap:0.5rem;
-        padding: 1rem;
+        /* padding: 1rem; */
     }
-    & .nav__span:hover{
+    .nav__span:hover{
         column-gap:1em;
 
     }

@@ -6,6 +6,8 @@ import { useState, useEffect } from 'react'
 //style
 import StyledSorting from './style'
 
+//icons
+import { VscDebugBreakpointLog } from 'react-icons/vsc'
 
 function Sorting() {
 
@@ -57,11 +59,15 @@ function Sorting() {
         <StyledSorting >
 
             <div className="sorting__info">
-
-                <span>Time complexity: θ(n^2)</span>
-                <span>Number of vectors: 20</span>
-                <span>Time (s): {time}</span>
-
+                <div>
+                    <span>Time complexity: θ(n^2)</span>
+                    <span>Number of vectors: 20</span>
+                    <span>Time (s): {time}</span>
+                </div>
+                <div>
+                    <span>speed: medium</span>
+                    <span>array size: medium</span>
+                </div>
             </div>
 
             <div className="sorting__visualization">
@@ -81,13 +87,15 @@ function Sorting() {
                 </div>
             </div>
             <div className="sorting__config">
-                <span>selection sort</span>
-                <span>isertion sort</span>
-                <span>bubble sort</span>
-                <span>quick sort</span>
-
-                <span>speed: 0----------</span>
-                <span>array size: medium</span>
+                <div>
+                    <span className="nav__span">selection sort<VscDebugBreakpointLog /></span>
+                    <span className="nav__span">insertion sort<VscDebugBreakpointLog /></span>
+                    <span className="nav__span">bubble sort<VscDebugBreakpointLog /></span>
+                    <span className="nav__span">quick sort<VscDebugBreakpointLog /></span>
+                </div>
+                <div>
+                    <span className='nav__span'>random array<VscDebugBreakpointLog /></span>
+                </div>
             </div>
         </StyledSorting >
     )
