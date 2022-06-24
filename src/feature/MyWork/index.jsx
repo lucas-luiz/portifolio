@@ -8,6 +8,7 @@ import StyledMyWork from './style'
 
 //components
 import Sorting from './Sorting/index'
+import Crypto from './Crypto/index'
 
 //icons
 import { IoMdArrowDropdown } from 'react-icons/io'
@@ -26,7 +27,7 @@ function MyWork() {
 
     const projects = {
         sorting: () => setCurrProject('sorting'),
-        cryptografy: () => setCurrProject('crpto'),
+        cryptografy: () => setCurrProject('crypto'),
         ai: () => setCurrProject('ai'),
         search: () => setCurrProject('serc'),
         lorem: () => setCurrProject('lore'),
@@ -70,6 +71,7 @@ function MyWork() {
                 }
             </nav>
             {currProject == 'sorting' ? <Sorting /> : null}
+            {currProject == 'cryptografy' ? <Crypto /> : null}
 
         </StyledMyWork >
     )
