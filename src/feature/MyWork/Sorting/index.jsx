@@ -58,7 +58,7 @@ function Sorting() {
     return (
         <StyledSorting >
 
-            <div className="sorting__info">
+            <div className="sorting__info project__left">
                 <div>
                     <span>Time complexity: θ(n^2)</span>
                     <span>Number of vectors: 20</span>
@@ -70,23 +70,24 @@ function Sorting() {
                 </div>
             </div>
 
-            <div className="sorting__visualization">
-                <div className="top">
-                    {
-                        array.map((vector, index) => {
-                            return <div className='vector' key={index} style={{ height: `${vector}%` }}></div>
-                        })
-                    }
-                </div>
-                <div className="bottom">
-                    {
-                        array.map((vector, index) => {
-                            return <div className='vector' key={index} style={{ height: `${vector}%` }}></div>
-                        })
-                    }
-                </div>
+
+            <div className="project__top">
+                {
+                    //TO-DO: TURN CURR VECTOR INTO USESTATE, VERIFY USESTATE == INDEX AND PAINT THE CURR VECTOR GREEN
+                    array.map((vector, index) => {
+                        return <div className='vector' key={index} style={{ height: `${vector}%` }}></div>
+                    })
+                }
             </div>
-            <div className="sorting__config">
+            <div className="project__bottom">
+                {
+                    array.map((vector, index) => {
+                        return <div className='vector' key={index} style={{ height: `${vector}%` }}></div>
+                    })
+                }
+            </div>
+
+            <div className="sorting__config project__right">
                 <div>
                     <span className="nav__span">selection sort<VscDebugBreakpointLog /></span>
                     <span className="nav__span">insertion sort<VscDebugBreakpointLog /></span>
