@@ -34,6 +34,23 @@ const StyledProject = styled.div`
         grid-row:3;
         grid-column:2;
     }
+
+    & .project__input{
+        font-size:1rem;
+
+        background: transparent;
+        border:none;
+        border-bottom:1px solid white;
+        padding: 0.5em;
+        width: 100%;
+
+        font-weight: bolder;
+        line-height: 1.5;
+        letter-spacing: 0.4em;
+   }
+   & .project__input:focus{
+        outline:none
+   }
     
 `
 export default StyledProject
