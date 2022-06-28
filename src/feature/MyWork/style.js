@@ -70,7 +70,15 @@ const MyWork = styled(Section)`
     & .span--left{
         grid-column: 1;
     }
+    & .disabled{
+        color:grey;
+        cursor: default;
+        column-gap:0.5em !important;
 
+        & *{
+            fill: grey;
+        }
+    }
    
 `
 

@@ -89,13 +89,13 @@ function Sorting() {
 
             <div className="sorting__config project__right">
                 <div>
-                    <span className="nav__span">selection sort<VscDebugBreakpointLog /></span>
-                    <span className="nav__span">insertion sort<VscDebugBreakpointLog /></span>
+                    <span className="nav__span disabled">selection sort<VscDebugBreakpointLog /></span>
+                    <span className="nav__span disabled">insertion sort<VscDebugBreakpointLog /></span>
                     <span className="nav__span">bubble sort<VscDebugBreakpointLog /></span>
-                    <span className="nav__span">quick sort<VscDebugBreakpointLog /></span>
+                    <span className="nav__span disabled">quick sort<VscDebugBreakpointLog /></span>
                 </div>
                 <div>
-                    <span className='nav__span'>random array<VscDebugBreakpointLog /></span>
+                    <span className='nav__span disabled'>random array<VscDebugBreakpointLog /></span>
                 </div>
             </div>
         </StyledSorting >

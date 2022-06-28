@@ -9,6 +9,7 @@ import StyledMyWork from './style'
 //components
 import Sorting from './Sorting/index'
 import Crypto from './Crypto/index'
+import Search from './Search/index'
 
 //icons
 import { IoMdArrowDropdown } from 'react-icons/io'
@@ -26,12 +27,12 @@ function MyWork() {
     const [TitleIs, setTitleIs] = useState("retracted")
 
     const projects = {
-        sorting: () => setCurrProject('sorting'),
-        cryptografy: () => setCurrProject('crypto'),
-        ai: () => setCurrProject('ai'),
-        search: () => setCurrProject('serc'),
-        lorem: () => setCurrProject('lore'),
-        api: () => setCurrProject('api')
+        cryptografy: 'enabled',
+        sorting: 'enabled',
+        ai: 'disabled',
+        path_finding: 'disabled',
+        search: 'enabled',
+        api: 'disabled'
     }
 
 
@@ -56,13 +57,13 @@ function MyWork() {
                         return (
                             index >= Object.keys(projects).length / 2 ?
                                 //left-side items
-                                <span className="nav__span span--right" key={index} onClick={() => setCurrProject(project)} >
+                                <span className={"nav__span span--right " + projects[project]} key={index} onClick={() => setCurrProject(project)} >
                                     {project}
                                     <VscDebugBreakpointLog></VscDebugBreakpointLog>
                                 </span>
                                 :
                                 //right-side items
-                                <span className="nav__span span--left" key={index} onClick={() => setCurrProject(project)} >
+                                <span className={"nav__span span--left " + projects[project]} key={index} onClick={() => setCurrProject(project)} >
                                     <VscDebugBreakpointLog></VscDebugBreakpointLog>
                                     {project}
                                 </span>
@@ -72,6 +73,7 @@ function MyWork() {
             </nav>
             {currProject == 'sorting' ? <Sorting /> : null}
             {currProject == 'cryptografy' ? <Crypto /> : null}
+            {currProject == 'search' ? <Search /> : null}
 
         </StyledMyWork >
     )

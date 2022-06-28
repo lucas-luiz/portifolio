@@ -51,6 +51,16 @@ const StyledProject = styled.div`
    & .project__input:focus{
         outline:none
    }
+
+    & .disabled{
+        color:grey;
+        cursor: default;
+        column-gap:0.5em !important;
+
+        & *{
+            fill: grey;
+        }
+    }
     
 `
 export default StyledProject

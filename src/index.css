@@ -35,7 +35,7 @@ body {
     background-image: url('./images/image.png');
 
     background-size: 25%;
-    animation: 30s bg alternate-reverse infinite linear;
+    animation: 60s bg alternate-reverse infinite linear;
 
 
 }

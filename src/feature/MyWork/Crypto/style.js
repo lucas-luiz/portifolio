@@ -10,6 +10,10 @@ const StyledCrypto = styled(StyledProject)`
         flex-direction: column;
         align-items: flex-start;
     }
+    & .project__left{
+        flex-direction:column;
+        width:85%;
+    }
 `
 
 export default StyledCrypto

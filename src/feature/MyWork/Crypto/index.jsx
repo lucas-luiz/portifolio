@@ -12,7 +12,6 @@ function Crypto() {
     const [crypto, setCrypto] = useState("")
 
     function encrypt(text, key) {
-        console.log("encrypt")
         const arr = text.split("")
         let newString = arr.map((char) => {
             if (char.charCodeAt(0) <= 90 && char.charCodeAt(0) >= 65) {
@@ -54,9 +53,6 @@ function Crypto() {
         const cryptoInput = document.querySelector("#crypto")
         cryptoInput.value = crypto
     }, [crypto])
-
-
-
     function handleTextChange(e) {
         setText(e.target.value.toUpperCase())
         setCrypto(encrypt(e.target.value.toUpperCase(), key))
@@ -71,19 +67,22 @@ function Crypto() {
     }
     return (
         <StyledCrypto>
-            <div className="project__left"><span>right</span></div>
+            <div className="project__left">
+                <span>caesar cipher: letters are replaced by others further in the the alphabet, based on a given offset</span>
+            </div>
 
             <div className="project__top ">
-                <input id="text" className="project__input" type="text" placeholder="decrypted text" onChange={handleTextChange}></input>
-                <input id="key" className="project__input" type="text" placeholder="key" onChange={handleKeyChange}></input>
-                <input id="crypto" className="project__input" type="text" placeholder="encrypted text" onChange={handleCryptoChange} ></input>
+                <input id="text" className="project__input" type="text" placeholder="decrypted text" onChange={handleTextChange} autoComplete="off"></input>
+                <input id="key" className="project__input" type="text" placeholder="key" onChange={handleKeyChange} autoComplete="off"></input>
+                <input id="crypto" className="project__input" type="text" placeholder="encrypted text" onChange={handleCryptoChange} autoComplete="off"></input>
             </div>
             <div className="project__bottom"></div>
 
             <div className="project__right">
+                <span className="nav__span disabled">substitution cipher <VscDebugBreakpointLog /></span>
+
+                <span className="nav__span disabled">keyword cipher<VscDebugBreakpointLog /></span>
                 <span className="nav__span">caesar cipher <VscDebugBreakpointLog /></span>
-                <span className="nav__span">lorem ipsum <VscDebugBreakpointLog /></span>
-                <span className="nav__span">sit amet <VscDebugBreakpointLog /></span>
             </div>
         </StyledCrypto >
     )
