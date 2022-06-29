@@ -52,7 +52,7 @@ function Sorting() {
             }
             setTime((Date.now() - startTime) / 1000)
 
-        }, 30);
+        }, 30)
     }, [])
 
     return (

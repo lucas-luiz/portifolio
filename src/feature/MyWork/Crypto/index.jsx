@@ -68,7 +68,7 @@ function Crypto() {
     return (
         <StyledCrypto>
             <div className="project__left">
-                <span>caesar cipher: letters are replaced by others further in the the alphabet, based on a given offset</span>
+                <span>caesar cipher: letters are replaced by others further in the the alphabet, based on a given offset number</span>
             </div>
 
             <div className="project__top ">
