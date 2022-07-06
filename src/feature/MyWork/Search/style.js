@@ -42,6 +42,9 @@ const StyledSearch = styled(StyledProject)`
         border: 1px solid grey;
         transition: 0.3s ease-in-out;
     }
+    & .search__compare__number{
+        border: 1px solid ${props => props.compareColor};
+    }
     & .search__compare__arrow{
         font-size: 1.2rem;
         line-height:0;

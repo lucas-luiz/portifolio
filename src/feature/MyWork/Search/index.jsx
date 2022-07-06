@@ -8,7 +8,10 @@ export default function Search() {
     const [array, setArray] = useState([])
     const [numElements, setNumElements] = useState(20)
     const [compareIndex, setCompareIndex] = useState(0)
+    const [compareNumber, setCompareNumber] = useState(10)
+    const [compareColor, setCompareColor] = useState('grey')
     const [arrayOffset, setArrayOffset] = useState(0)
+
 
     //SET ARRAY
     useEffect(() => {
@@ -33,11 +36,21 @@ export default function Search() {
     //SEARCH TIMEINTERVAL
     useEffect(() => {
         let index = compareIndex
+        setCompareColor('grey')
         const search = setInterval(() => {
-            console.log(compareIndex)
+            //verify compareNumber
+            if (array[index] == compareNumber) {
+                setCompareColor('green')
+                clearInterval(search)
+                return
+            }
+
+            //index update
             index++
             if (index > numElements - 1) {
                 index = 0;
+                setCompareColor('red')
+                clearInterval(search)
             }
             setCompareIndex(index);
 
@@ -47,10 +60,10 @@ export default function Search() {
 
 
     return (
-        <StyledSearch offset={arrayOffset + 'rem'}>
+        <StyledSearch offset={arrayOffset + 'rem'} compareColor={compareColor}>
             <div className="project__top">
                 <div className="search__compare" style={{ transition: "0.3s ease-in-out", marginLeft: `${(compareIndex * 2.9) + arrayOffset}rem` }}>
-                    <div className="search__compare__number" >10</div>
+                    <div className="search__compare__number" >{compareNumber}</div>
                     <div className="search__compare__arrow"><GoArrowDown /></div>
                 </div>
                 <div className="search__array" >
